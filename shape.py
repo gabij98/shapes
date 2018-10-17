@@ -24,3 +24,13 @@ class Shape(object):
             'area': self.area(),
             'perimeter': self.perimeter()
         }
+
+    def __str__(self):
+        """
+        Abstract method returning a name of a shape.
+        """
+        
+    def __repr__(self):
+        """
+        Abstract method returning a programming represantation a shape.
+        """

@@ -1,5 +1,8 @@
 from shape import Shape
 import numpy as np
+import pygame
+
+game_screen = pygame.display.set_mode((800, 480))
 
 class Parallelogram(Shape):
     """
@@ -35,6 +38,11 @@ class Parallelogram(Shape):
     def __repr__(self):
         return "Parallelogram({0.a}, {0.b}, {0.alpha})".format(self)
 
+    def draw(self):
+        h = self.b * np.sin(self._alpha)
+        d = self.b * np.cos(self._alpha)
+        return pygame.draw.polygon(game_screen, (75, 0, 130), [[200, 300], [200+d, 300-h], [200+d+self.a, 300-h], [200+self.a, 300]], 3)
+
 class Diamond(Parallelogram):
     """
     Diamond shape as a specific parallelogram.
@@ -48,3 +56,8 @@ class Diamond(Parallelogram):
 
     def __repr__(self):
         return "Diamond({0.a}, {0.alpha})".format(self)
+
+    def draw(self):
+        e = 2 * self.a * np.cos(self._alpha/2)
+        f = 2 * self.a * np.sin(self._alpha/2)
+        return pygame.draw.polygon(game_screen, (255, 0, 0), [[150, 100], [150+(e/2), 100-(f/2)], [150+e, 100], [150+(e/2), 100+(f/2)]], 3)

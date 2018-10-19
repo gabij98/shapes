@@ -1,5 +1,8 @@
 from shape import Shape
 import numpy as np
+import pygame
+
+game_screen = pygame.display.set_mode((800, 480))
 
 class Circle(Shape):
     """
@@ -23,3 +26,6 @@ class Circle(Shape):
 
     def __repr__(self):
         return "Circle({0.r})".format(self)
+
+    def draw(self):
+        return pygame.draw.circle(game_screen, (0, 0, 255), (600, 70), self.r, 3)

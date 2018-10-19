@@ -16,4 +16,10 @@ class Circle(Shape):
         return round(np.pi * self.r ** 2, 2)
 
     def perimeter(self):
-        return 2 * np.pi * self.r
+        return round(2 * np.pi * self.r, 2)
+
+    def __str__(self):
+        return "Circle with a radius {0.r}".format(self)
+
+    def __repr__(self):
+        return "Circle({0.r})".format(self)

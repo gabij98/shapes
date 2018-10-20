@@ -1,6 +1,5 @@
 # coding: utf8
 
-
 class Shape(object):
     """
     Base class for all shapes.
@@ -32,5 +31,10 @@ class Shape(object):
         
     def __repr__(self):
         """
-        Abstract method returning a programming represantation a shape.
+        Abstract method returning a programming represantation of a shape.
+        """
+
+    def draw(self):
+        """
+        Abstract method which draws a shape.
         """

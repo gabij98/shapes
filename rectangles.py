@@ -30,7 +30,7 @@ class Rectangle(Shape):
         return "Rectangle({0.a}, {0.b})".format(self)
 
     def draw(self):
-        return pygame.draw.rect(game_screen, (255, 215, 0), pygame.Rect(600, 300, self.a, self.b), 3)
+        return pygame.draw.rect(game_screen, (255, 215, 0), pygame.Rect(620, 280, self.a, self.b), 3)
 
 class Square(Rectangle):
     """
@@ -47,4 +47,4 @@ class Square(Rectangle):
         return "Square({0.a})".format(self)
 
     def draw(self):
-        return pygame.draw.rect(game_screen, (0, 255, 0), pygame.Rect(400, 50, self.a, self.a), 3)
+        return pygame.draw.rect(game_screen, (0, 255, 0), pygame.Rect(350, 50, self.a, self.a), 3)

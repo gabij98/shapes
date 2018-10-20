@@ -33,7 +33,7 @@ class Triangle(Shape):
         AB = np.array([self.a, 0])
         AC = np.array([self.b * np.cos(self._alpha), self.b * np.sin(self._alpha)])
         BC = np.add(AB, AC)
-        return np.add(BC, AB, AC)
+        return round(np.linalg.norm(AB) + np.linalg.norm(AC) + np.linalg.norm(BC), 2)
 
     def __str__(self):
         return "Triangle with sides {0.a} and {0.b} and angle between them {0.alpha}°".format(self)
@@ -44,4 +44,4 @@ class Triangle(Shape):
     def draw(self):
         d = self.b * np.cos(self._alpha)
         h = self.b * np.sin(self._alpha)
-        return pygame.draw.polygon(game_screen, (128, 128, 0), [[100, 350], [100 + d, 350 - h], [100 + self.a, 350]], 3)
+        return pygame.draw.polygon(game_screen, (128, 128, 0), [[100, 370], [100 + d, 370 - h], [100 + self.a, 370]], 3)

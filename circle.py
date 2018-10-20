@@ -28,4 +28,4 @@ class Circle(Shape):
         return "Circle({0.r})".format(self)
 
     def draw(self):
-        return pygame.draw.circle(game_screen, (0, 0, 255), (600, 70), self.r, 3)
+        return pygame.draw.circle(game_screen, (0, 0, 255), (650, 100), self.r, 3)

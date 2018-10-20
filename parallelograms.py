@@ -41,7 +41,7 @@ class Parallelogram(Shape):
     def draw(self):
         h = self.b * np.sin(self._alpha)
         d = self.b * np.cos(self._alpha)
-        return pygame.draw.polygon(game_screen, (75, 0, 130), [[200, 300], [200+d, 300-h], [200+d+self.a, 300-h], [200+self.a, 300]], 3)
+        return pygame.draw.polygon(game_screen, (75, 0, 130), [[300, 370], [300+d, 370-h], [300+d+self.a, 370-h], [300+self.a, 370]], 3)
 
 class Diamond(Parallelogram):
     """
@@ -60,4 +60,4 @@ class Diamond(Parallelogram):
     def draw(self):
         e = 2 * self.a * np.cos(self._alpha/2)
         f = 2 * self.a * np.sin(self._alpha/2)
-        return pygame.draw.polygon(game_screen, (255, 0, 0), [[150, 100], [150+(e/2), 100-(f/2)], [150+e, 100], [150+(e/2), 100+(f/2)]], 3)
+        return pygame.draw.polygon(game_screen, (255, 0, 0), [[50, 100], [50+(e/2), 100-(f/2)], [50+e, 100], [50+(e/2), 100+(f/2)]], 3)

@@ -6,6 +6,8 @@ from parallelograms import Parallelogram, Diamond
 from triangle import Triangle
 from circle import Circle
 
+# checking the validity of values of area and perimeter for each shape
+
 class TestRectangle(TestCase):
 
     def test_area(self):

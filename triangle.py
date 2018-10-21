@@ -1,6 +1,6 @@
 from shape import Shape
-import pygame
 import numpy as np
+import pygame
 
 game_screen = pygame.display.set_mode((800, 480))
 

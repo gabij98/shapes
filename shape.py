@@ -31,7 +31,7 @@ class Shape(object):
         
     def __repr__(self):
         """
-        Abstract method returning a programming represantation of a shape.
+        Abstract method returning a programming representation of a shape.
         """
 
     def draw(self):

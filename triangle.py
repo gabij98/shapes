@@ -32,7 +32,7 @@ class Triangle(Shape):
     def perimeter(self):
         AB = np.array([self.a, 0])
         AC = np.array([self.b * np.cos(self._alpha), self.b * np.sin(self._alpha)])
-        BC = np.add(AB, AC)
+        BC = np.subtract(AC, AB)
         return round(np.linalg.norm(AB) + np.linalg.norm(AC) + np.linalg.norm(BC), 2)
 
     def __str__(self):

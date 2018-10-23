@@ -6,7 +6,7 @@ game_screen = pygame.display.set_mode((800, 480))
 
 class Parallelogram(Shape):
     """
-    Parallelogram shape
+    Parallelogram shape.
     """
 
     a = None

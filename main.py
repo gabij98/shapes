@@ -13,7 +13,7 @@ rectangle1 = rectangles.Rectangle(95, 130)
 square1 = rectangles.Square(90)
 parallelogram1 = parallelograms.Parallelogram(150, 100, 45)
 diamond1 = parallelograms.Diamond(100, 60)
-triangle1 = triangle.Triangle(100, 100, 110)
+triangle1 = triangle.Triangle(100, 120, 110)
 circle1 = circle.Circle(50)
 
 while True:

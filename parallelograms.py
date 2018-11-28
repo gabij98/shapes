@@ -26,9 +26,11 @@ class Parallelogram(Shape):
     def alpha(self):
         return round(self._alpha * 180 / np.pi, 1)
 
+    @property
     def area(self):
         return round(self.a * self.b * np.sin(self._alpha), 2)
 
+    @property
     def perimeter(self):
         return 2 * (self.a + self.b)
 

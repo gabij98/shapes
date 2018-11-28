@@ -23,12 +23,14 @@ class Triangle(Shape):
     def alpha(self):
         return round(self._alpha * 180 / np.pi, 1)
 
+    @property
     def area(self):
         AB = np.array([self.a, 0])
         AC = np.array([self.b * np.cos(self._alpha), self.b * np.sin(self._alpha)])
         d = np.array([AB, AC])
         return round(1/2 * np.absolute(np.linalg.det(d)), 2)
 
+    @property
     def perimeter(self):
         AB = np.array([self.a, 0])
         AC = np.array([self.b * np.cos(self._alpha), self.b * np.sin(self._alpha)])

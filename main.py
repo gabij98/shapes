@@ -16,6 +16,9 @@ diamond1 = parallelograms.Diamond(100, 60)
 triangle1 = triangle.Triangle(100, 120, 110)
 circle1 = circle.Circle(50)
 
+print(circle1.area)
+print(triangle1.perimeter)
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:

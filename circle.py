@@ -15,9 +15,11 @@ class Circle(Shape):
         super().__init__()
         self.r = r
 
+    @property
     def area(self):
         return round(np.pi * self.r ** 2, 2)
 
+    @property
     def perimeter(self):
         return round(2 * np.pi * self.r, 2)
 
